@@ -543,16 +543,63 @@ hero-image-wrap img
     }
     .service-list {
         flex-direction: column;
+        align-items: center;    /* Center the cards horizontally */
         gap: 10px;
     }
-    .logo {
-        margin-left: 0;
-        padding-left: 0;
+    .service-item {
+        width: 90%;
+        max-width: 340px;
+        margin: 0 auto;
     }
-    .brand {
-        margin-left: 0;
+}
+
+/* Login button styles */
+.btn-login {
+    background: linear-gradient(90deg, #0096c7 60%, #0077b6 100%);
+    color: #fff !important;
+    padding: 8px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    margin-left: 1vw;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,123,167,0.08);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+.btn-login:hover, .btn-login:focus {
+    background: linear-gradient(90deg, #0077b6 60%, #0096c7 100%);
+    box-shadow: 0 4px 16px rgba(0,123,167,0.16);
+    color: #fff !important;
+}
+
+/* Make Login button full width in hamburger menu on mobile */
+@media (max-width: 800px) {
+    nav .btn-login {
+        width: 70%;
+        min-width: 120px;
+        max-width: 220px;
+        margin: 10px auto 0 auto;
+        text-align: center;
+        display: block;
+        font-size: 1.08rem;
+        padding: 12px 0;
+    }
+}
+@media (max-width: 600px) {
+    .btn-primary {
+        width: 70%;
+        min-width: 120px;
+        max-width: 220px;
+        margin: 0 auto 18px auto;
+        display: block;
+        font-size: 1.08rem;
+        padding: 12px 0;
+        text-align: center;    /* Center the text */
+        justify-content: center; /* For flex containers, just in case */
     }
     .hero-image-wrap {
-        display: none;
+        display: none !important;
     }
 }
