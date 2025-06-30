@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Care Tangline</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="images/logo.jpg.jpg" alt="Dental Acre Tangline Logo">
+                <span class="brand">Dental Care Tangline</span>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#booking">Book Appointment</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Your Smile, Our Passion</h1>
+                <p>
+                    Experience world-class dental care with our expert team.<br>
+                    Comprehensive services in a relaxing, modern environment.<br>
+                    <span class="highlight">Book your appointment today and smile with confidence!</span>
+                </p>
+                <a href="#booking" class="btn btn-primary">Book Now</a>
+            </div>
+            <div class="hero-image-wrap">
+                <img src="images/formula.jpg" alt="Dental Clinic" class="hero-image">
+                <div class="hero-badge">Trusted by 5,000+ Patients</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Dental Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="images/brushs.jpg" alt="Teeth Whitening" class="service-img">
+                    <h3>Teeth Whitening</h3>
+                    <p>Brighten your smile with our safe and effective whitening treatments.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Dental Implants" class="service-img">
+                    <h3>Dental Implants</h3>
+                    <p>Restore missing teeth with natural-looking, durable dental implants.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&w=400&q=80" alt="Orthodontics" class="service-img">
+                    <h3>Orthodontics</h3>
+                    <p>Straighten your teeth with braces or clear aligners for all ages.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://images.pexels.com/photos/5355694/pexels-photo-5355694.jpeg?auto=compress&w=400&q=80" alt="General Dentistry" class="service-img">
+                    <h3>General Dentistry</h3>
+                    <p>Comprehensive check-ups, cleanings, and preventive care for your family.</p>
+                </div>
+                <div class="service-item">
+                    <img src="https://images.pexels.com/photos/3845768/pexels-photo-3845768.jpeg?auto=compress&w=400&q=80" alt="Cosmetic Dentistry" class="service-img">
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Enhance your smile with veneers, bonding, and aesthetic treatments.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/teeth.jpg" alt="Emergency Care" class="service-img">
+                    <h3>Emergency Care</h3>
+                    <p>Prompt attention for dental emergencies and urgent care needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking" id="booking">
+        <h2>Book Your Appointment</h2>
+        <form class="booking-form">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option>Teeth Whitening</option>
+                <option>Dental Implants</option>
+                <option>Orthodontics</option>
+                <option>General Dentistry</option>
+                <option>Cosmetic Dentistry</option>
+                <option>Emergency Care</option>
+            </select>
+            <input type="date" name="date" required>
+            <textarea name="message" rows="3" placeholder="Additional Notes"></textarea>
+            <button type="submit" class="btn">Submit Booking</button>
+        </form>
+    </section>
+
+    <section class="gallery">
+        <h2>Our Clinic Gallery</h2>
+        <div class="gallery-list">
+            <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" alt="Clinic Interior">
+            <img src="https://images.pexels.com/photos/3845805/pexels-photo-3845805.jpeg?auto=compress&w=600&q=80" alt="Dental Equipment">
+            <img src="https://images.pexels.com/photos/5355721/pexels-photo-5355721.jpeg?auto=compress&w=600&q=80" alt="Dentist at Work">
+            <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=600&q=80" alt="Patient Care">
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2024 Dental Acre Tangline. All rights reserved. | Contact: info@dentalacretangline.com | +123 456 7890</p>
+    </footer>
+</body>
+</html>
