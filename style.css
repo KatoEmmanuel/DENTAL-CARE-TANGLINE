@@ -18,9 +18,9 @@ header {
     align-items: center;
 }
 .logo img {
-    height: 48px;
-    margin-right: 10px;
+    height: 70px;
     max-width: 100%;
+    margin-right: 10px;
 }
 nav {
     display: flex;
@@ -495,7 +495,7 @@ hero-image-wrap img
         white-space: nowrap;  /* Prevent wrapping */
     }
     .logo img {
-        height: 28px;         /* Optionally reduce logo image size */
+        height: 48px;         /* Optionally reduce logo image size */
         margin-right: 6px;
     }
     nav {
@@ -585,6 +585,8 @@ hero-image-wrap img
         display: block;
         font-size: 1.08rem;
         padding: 12px 0;
+        text-align: center;    /* Center the text */
+        justify-content: center; /* For flex containers, just in case */
     }
 }
 @media (max-width: 600px) {

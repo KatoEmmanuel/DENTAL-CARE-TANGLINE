@@ -6,6 +6,35 @@
     <title>Dental Care Tangline</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .map-responsive {
+            position: relative;
+            width: 100%;
+            padding-bottom: 40%; /* Aspect ratio: 2.5:1 (adjust as needed) */
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .map-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* On small screens, adjust aspect ratio for better fit */
+        @media (max-width: 600px) {
+            .map-responsive {
+                padding-bottom: 65%; /* Taller map for mobile */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,7 +53,7 @@
                 <a href="#services">Services</a>
                 <a href="#booking">Book Appointment</a>
                 <a href="#contact">Contact</a>
-                <a href="#login" class="btn-login">Login</a>
+                <a href="login.html" class="btn-login">Login</a>
             </nav>
         </div>
     </header>
@@ -57,12 +86,12 @@
                     <p>Brighten your smile with our safe and effective whitening treatments.</p>
                 </div>
                 <div class="service-item">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Dental Implants" class="service-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvbmPTY5MJdSaYSh-c1eGejnbgSbzondSRCCHMjTOypsqYjwPWIT50b1HMq6Rkr1bImfA&usqp=CAU" alt="Dental Implants" class="service-img">
                     <h3>Dental Implants</h3>
                     <p>Restore missing teeth with natural-looking, durable dental implants.</p>
                 </div>
                 <div class="service-item">
-                    <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&w=400&q=80" alt="Orthodontics" class="service-img">
+                    <img src="https://hdorthodontics.com/wp-content/uploads/2019/07/Board-Certified-Orthodontist.gif" alt="Orthodontics" class="service-img">
                     <h3>Orthodontics</h3>
                     <p>Straighten your teeth with braces or clear aligners for all ages.</p>
                 </div>
@@ -72,7 +101,7 @@
                     <p>Comprehensive check-ups, cleanings, and preventive care for your family.</p>
                 </div>
                 <div class="service-item">
-                    <img src="https://images.pexels.com/photos/3845768/pexels-photo-3845768.jpeg?auto=compress&w=400&q=80" alt="Cosmetic Dentistry" class="service-img">
+                    <img src="https://www.dentistelreno.com/blog/wp-content/uploads/2013/12/shutterstock_144914185.jpg" alt="Cosmetic Dentistry" class="service-img">
                     <h3>Cosmetic Dentistry</h3>
                     <p>Enhance your smile with veneers, bonding, and aesthetic treatments.</p>
                 </div>
@@ -115,9 +144,14 @@
             <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=600&q=80" alt="Patient Care">
         </div>
     </section>
+    <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31917.93723870582!2d32.575069710839855!3d0.35403070000000775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dba30d2043395%3A0x9a598f3f78ad04ec!2sLife%20Link%20Medical%20Centre%20Ntinda!5e0!3m2!1sen!2sug!4v1751437745587!5m2!1sen!2sug"
+            width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
 
     <footer id="contact">
-        <p>&copy; 2024 Dental Acre Tangline. All rights reserved. | Contact: info@dentalacretangline.com | +123 456 7890</p>
+        <p>&copy; 2025 Dental Care Tangline. All rights reserved. | Contact: info@dentalacretangline.com | +256 --------</p>
     </footer>
 </body>
 </html>
