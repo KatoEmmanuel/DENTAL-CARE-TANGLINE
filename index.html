@@ -1,163 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Care Tangline</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .map-responsive {
-            position: relative;
-            width: 100%;
-            padding-bottom: 40%; /* Aspect ratio: 2.5:1 (adjust as needed) */
-            height: 0;
-            overflow: hidden;
-            margin: 30px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-        .map-responsive iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* On small screens, adjust aspect ratio for better fit */
-        @media (max-width: 600px) {
-            .map-responsive {
-                padding-bottom: 65%; /* Taller map for mobile */
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Care Tangline | Specialist Dental Clinic</title>
+  <meta name="description" content="Dental Care Tangline — expert dental care in Ntinda, Kampala. From routine check-ups to implants and cosmetic dentistry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container header-flex">
-            <div class="logo">
-                <img src="images/logo.jpg.jpg" alt="Dental Acre Tangline Logo">
-                <span class="brand">Dental Care Tangline</span>
-            </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu">
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#booking">Book Appointment</a>
-                <a href="#contact">Contact</a>
-                <a href="login.html" class="btn-login">Login</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <h1>Your Smile, Our Passion</h1>
-                <p>
-                    Experience world-class dental care with our expert team.<br>
-                    Comprehensive services in a relaxing, modern environment.<br>
-                    <span class="highlight">Book your appointment today and smile with confidence!</span>
-                </p>
-                <a href="#booking" class="btn btn-primary">Book Now</a>
-            </div>
-            <div class="hero-image-wrap">
-                <img src="images/formula.jpg" alt="Dental Clinic" class="hero-image">
-                <div class="hero-badge">Trusted by 5,000+ Patients around the country</div>
-            </div>
+<header id="top-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Dental Care Tangline home">
+        <div class="logo-icon">
+          <img src="logo.jpg.jpg" alt="Dental Care Tangline">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 3C10 3 6 6.5 6 11c0 2.5 1 4.5 2 6.5 1.5 2.8 2.5 5.5 3 8h6c.5-2.5 1.5-5.2 3-8 1-2 2-4 2-6.5 0-4.5-4-8-8-8z" fill="white" opacity=".9"/>
+            <path d="M11 3.5C8.5 4.5 6 7.5 6 11c0 2.5 1 4.5 2 6.5" stroke="rgba(255,255,255,.4)" stroke-width="1"/>
+          </svg>
         </div>
-    </section>
-
-    <section class="services" id="services">
-        <div class="container">
-            <h2>Our Dental Services</h2>
-            <div class="service-list">
-                <div class="service-item">
-                    <img src="images/brushs.jpg" alt="Teeth Whitening" class="service-img">
-                    <h3>Teeth Whitening</h3>
-                    <p>Brighten your smile with our safe and effective whitening treatments.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvbmPTY5MJdSaYSh-c1eGejnbgSbzondSRCCHMjTOypsqYjwPWIT50b1HMq6Rkr1bImfA&usqp=CAU" alt="Dental Implants" class="service-img">
-                    <h3>Dental Implants</h3>
-                    <p>Restore missing teeth with natural-looking, durable dental implants.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://hdorthodontics.com/wp-content/uploads/2019/07/Board-Certified-Orthodontist.gif" alt="Orthodontics" class="service-img">
-                    <h3>Orthodontics</h3>
-                    <p>Straighten your teeth with braces or clear aligners for all ages.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://images.pexels.com/photos/5355694/pexels-photo-5355694.jpeg?auto=compress&w=400&q=80" alt="General Dentistry" class="service-img">
-                    <h3>General Dentistry</h3>
-                    <p>Comprehensive check-ups, cleanings, and preventive care for your family.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://www.dentistelreno.com/blog/wp-content/uploads/2013/12/shutterstock_144914185.jpg" alt="Cosmetic Dentistry" class="service-img">
-                    <h3>Cosmetic Dentistry</h3>
-                    <p>Enhance your smile with veneers, bonding, bleaching  and aesthetic treatments.</p>
-                </div>
-                <div class="service-item">
-                    <img src="images/teeth.jpg" alt="Emergency Care" class="service-img">
-                    <h3>Emergency Care</h3>
-                    <p>Prompt attention for dental emergencies and urgent care needs.</p>
-                </div>
-                <div class="service-item">
-                    <img src="images/teeth.jpg" alt="Emergency Care" class="service-img">
-                    <h3> Prosthetics / Teeth Replacement Dentistry</h3>
-                    <p>We restore missing or damaged teeth using natural-looking solutions like dentures, crowns, bridges, and implants.</p>
-                </div>
-            </div>
+        <div class="logo-text">
+          <span class="brand">Dental Care Tangline</span>
+          <span class="tagline">Specialist Dental Clinic</span>
         </div>
-    </section>
+      </a>
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#doctors">Our Doctors</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Appointments</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/256702857190?text=Hello!%20I%20would%20like%20to%20book%20an%20appointment%20at%20Dental%20Care%20Tangline" 
+           class="btn-nav btn-whatsapp" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           title="Book appointment via WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="whatsapp-icon">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a6.963 6.963 0 0 0-6.962 6.972c0 1.54.378 3.04 1.1 4.38L2.29 22.02l4.868-1.277c1.285.697 2.744 1.067 4.285 1.067h.004a6.97 6.97 0 0 0 6.963-6.973c0-1.862-.729-3.612-2.05-4.932a6.954 6.954 0 0 0-4.913-2.035M19.313 1.637C17.238.368 14.666-.055 12.039.004 6.126.165 1.492 4.81 1.33 10.73c-.048 1.71.37 3.39 1.21 4.88L.016 23.922l5.433-1.426C7.019 23.55 8.709 24 10.512 24h.011c5.918 0 10.552-4.644 10.714-10.565.027-1.412-.188-2.814-.647-4.14.464-1.326.683-2.728.656-4.14-.162-5.92-4.8-10.56-10.715-10.56" />
+          </svg>
+          Book via WhatsApp
+        </a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <section class="booking" id="booking">
-        <h2>Book Your Appointment</h2>
-        <form class="booking-form">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-            <select name="service" required>
-                <option value="">Select Service</option>
+<!-- HERO -->
+<section class="hero" aria-label="Hero banner">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span class="dot" aria-hidden="true"></span>
+          Now accepting new patients
+        </div>
+        <h1>Your Healthiest<br><em>Smile</em> Starts Here</h1>
+        <p>Expert dental care delivered with precision, warmth and honesty. From routine check-ups to full smile transformations — we are with you every step of the way.</p>
+        <div class="hero-btns">
+          <a href="#booking" class="btn-primary">Book an Appointment</a>
+          <a href="#services" class="btn-ghost">Explore Services</a>
+        </div>
+        <div class="hero-stats" aria-label="Clinic statistics">
+          <div class="hero-stat"><div class="num">5,000+</div><div class="label">Patients Treated</div></div>
+          <div class="hero-stat"><div class="num">12+</div><div class="label">Years of Service</div></div>
+          <div class="hero-stat"><div class="num">3+</div><div class="label">Expert Dentists</div></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-img-wrap">
+          <img src="pic1.jpg" alt="Happy dental patient receiving care" loading="eager">
+          <div class="hero-card">
+            <div class="hero-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1A7FA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <div><div class="val">98%</div><div class="desc">Patient Satisfaction</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar" aria-label="Trust indicators">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed &amp; Certified Practitioners
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Same-Day Emergency Appointments
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Family-Friendly Environment
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Modern Digital X-Ray Technology
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Accepting New Patients
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="services-head">
+      <span class="section-label">What We Offer</span>
+      <h2 class="section-title" id="services-title">Comprehensive Dental Services</h2>
+      <p class="section-sub">From prevention to restoration, our full range of services ensures your smile stays healthy at every stage of life.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <h3>Teeth Whitening</h3>
+        <p>Professional-grade whitening treatments that brighten your smile safely and effectively — in-clinic or take-home kits available.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.5 2.8-1.3 3.8L18 22H6l3.3-12.2A6 6 0 0 1 8 6a4 4 0 0 1 4-4z"/></svg></div>
+        <h3>Dental Implants</h3>
+        <p>Restore missing teeth with natural-looking, titanium-rooted implants that feel and function just like your own teeth.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h18v4H3z"/><path d="M3 10h18v4H3z"/><path d="M3 17h18v4H3z"/><circle cx="7" cy="5" r="1" fill="currentColor"/><circle cx="7" cy="12" r="1" fill="currentColor"/></svg></div>
+        <h3>Orthodontics</h3>
+        <p>Straighten your smile with modern braces or discreet clear aligners. Solutions for children, teens, and adults alike.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>General Dentistry</h3>
+        <p>Comprehensive check-ups, professional cleanings, fillings, and preventive care to keep your whole family's teeth in great shape.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>Cosmetic Dentistry</h3>
+        <p>Veneers, bonding, and full aesthetic makeovers tailored to give you the confident, camera-ready smile you have always wanted.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <h3>Emergency Care</h3>
+        <p>Dental pain does not wait. We provide same-day emergency appointments for toothaches, broken teeth, and urgent oral needs.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <h3>Prosthetics &amp; Replacements</h3>
+        <p>Restore function and aesthetics with custom dentures, crowns, and bridges — crafted for a comfortable, natural-looking result.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Children's Dentistry</h3>
+        <p>Fun, gentle, and anxiety-free dental care designed for little smiles. We help kids build healthy habits that last a lifetime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" aria-labelledby="why-title">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title" id="why-title">Dental Care You Can<br>Actually Trust</h2>
+        <p class="section-sub">We combine clinical expertise with a genuinely caring approach — because your comfort and confidence matter as much as your oral health.</p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h4>Fully Qualified Specialists</h4><p>All our dentists hold advanced qualifications and pursue ongoing professional development to stay at the cutting edge of care.</p></div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div><h4>Advanced Digital Technology</h4><p>Digital X-rays, intraoral cameras, and modern tools for accurate diagnosis and minimally invasive procedures.</p></div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><h4>Flexible Scheduling</h4><p>Early morning, evening, and weekend appointments to fit your busy life — no long waits for an available slot.</p></div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div><h4>Warm, Patient-Centred Care</h4><p>We take time to listen, explain, and ensure you feel genuinely at ease — especially if dental anxiety has kept you away before.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual" aria-hidden="true">
+        <div class="why-img-grid">
+          <img src="https://images.unsplash.com/photo-1684607633217-462056580c3c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsYWNrJTIwZGVudGlzdHxlbnwwfHwwfHx8MA%3D%3D" alt="Dental examination">
+          <img src="data:image/jpeg;base64,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" alt="Modern dental equipment">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="doctors" id="doctors" aria-labelledby="doctors-title">
+  <div class="container">
+    <div class="doctors-head">
+      <span class="section-label">Meet the Team</span>
+      <h2 class="section-title" id="doctors-title">Our Expert Dentists</h2>
+      <p class="section-sub" style="margin:0 auto;">Experienced, compassionate, and committed to giving you the best possible dental experience.</p>
+    </div>
+    <div class="doctors-grid">
+
+      <article class="doctor-card fade-up">
+        <div class="doctor-photo-placeholder">
+            
+                <img src="https://www.ehealthlicense.go.ug/images/1779005541LEN%20PASSPORT%20SIZE.jpg" alt="Dr. Leonard Dduungu" style="width:100%;height:300px;object-fit:cover;object-position:top;">
+          
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+            <circle cx="32" cy="22" r="12" stroke="#1A7FA0" stroke-width="2"/>
+            <path d="M10 54c0-12.15 9.85-22 22-22s22 9.85 22 22" stroke="#1A7FA0" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          
+        </div>
+        <div class="doctor-body">
+          <p class="role">Lead Dentist &amp; Founder</p>
+          <h3>Dr. Leonard Dduungu</h3>
+          <p class="bio">Dr. Dduungu founded Dental Care Tangline with a vision to make specialist dental care accessible and anxiety-free. With over 18+ years of  experience, he specialises in complex restorative and implant procedures.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">Dental Implants</span>
+            <span class="doctor-tag">Restorative</span>
+            <span class="doctor-tag">Oral Surgery</span>
+          </div>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item"><span class="m-val">18+</span><span class="m-key">Years Exp.</span></div>
+            <div class="doctor-meta-item"><span class="m-val">2,400+</span><span class="m-key">Patients</span></div>
+            <div class="doctor-meta-item"><span class="m-val">BDS, MPH, MSC ORTHODONTHICS</span><span class="m-key">Qualification</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="doctor-card fade-up">
+        <div class="doctor-photo-placeholder">
+          
+                <img src="https://www.ehealthlicense.go.ug/images/164743926829947.jpg" alt="Dr. Aisha Nakato" style="width:100%;height:300px;object-fit:cover;object-position:top;">
+         
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+            <circle cx="32" cy="22" r="12" stroke="#1A7FA0" stroke-width="2"/>
+            <path d="M10 54c0-12.15 9.85-22 22-22s22 9.85 22 22" stroke="#1A7FA0" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          
+        </div>
+        <div class="doctor-body">
+          <p class="role">Orthodontist &amp; Cosmetic Specialist</p>
+          <h3>Dr. William Wamala</h3>
+          <p class="bio">Dr. William is passionate about transforming smiles through orthodontics and cosmetic dentistry. He brings a meticulous eye for aesthetics and is dedicated to creating personalized treatment plans that enhance both oral health and confidence.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">Orthodontics</span>
+            <span class="doctor-tag">Veneers</span>
+            <span class="doctor-tag">Smile Design</span>
+          </div>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item"><span class="m-val">6+</span><span class="m-key">Years Exp.</span></div>
+            <div class="doctor-meta-item"><span class="m-val">1,800+</span><span class="m-key">Patients</span></div>
+            
+          </div>
+        </div>
+      </article>
+
+      <article class="doctor-card fade-up">
+        <div class="doctor-photo-placeholder">
+          
+                <img src="https://www.ehealthlicense.go.ug/images/175679487533989p.png" alt="Dr. Moses Ssemwogerere" style="width:100%;height:300px;object-fit:cover;object-position:top;">
+          
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+            <circle cx="32" cy="22" r="12" stroke="#1A7FA0" stroke-width="2"/>
+            <path d="M10 54c0-12.15 9.85-22 22-22s22 9.85 22 22" stroke="#1A7FA0" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          
+        </div>
+        <div class="doctor-body">
+          <p class="role">General &amp; Paediatric Dentist</p>
+          <h3>Dr. Brenda Komugisha</h3>
+          <p class="bio">Dr. Brenda is the clinic’s go-to professional for families and children. Known for her gentle manner and ability to put even the most nervous patients at ease, she has a deep commitment to providing compassionate, high-quality care for every patient.</p>
+          <div class="doctor-tags">
+            <span class="doctor-tag">Children's Dentistry</span>
+            <span class="doctor-tag">Preventive Care</span>
+            <span class="doctor-tag">Root Canal</span>
+          </div>
+          <div class="doctor-meta">
+            <div class="doctor-meta-item"><span class="m-val">8+</span><span class="m-key">Years Exp.</span></div>
+            <div class="doctor-meta-item"><span class="m-val">1,600+</span><span class="m-key">Patients</span></div>
+            <div class="doctor-meta-item"><span class="m-val">DPHD, BBLT</span><span class="m-key">Qualification</span></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    <div class="gallery-head">
+      <span class="section-label">Our Clinic</span>
+      <h2 class="section-title" id="gallery-title">Inside Dental Care Tangline</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="pic1.jpg" alt="Dentist treating a patient" loading="lazy">
+        <div class="gallery-item-overlay"><span>Patient Treatment</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/5355694/pexels-photo-5355694.jpeg?auto=compress&w=600&q=80" alt="Dental check-up" loading="lazy">
+        <div class="gallery-item-overlay"><span>Check-Up</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/3881449/pexels-photo-3881449.jpeg?auto=compress&w=600&q=80" alt="Modern clinic interior" loading="lazy">
+        <div class="gallery-item-overlay"><span>Clinic Interior</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/4269694/pexels-photo-4269694.jpeg?auto=compress&w=600&q=80" alt="Dental equipment" loading="lazy">
+        <div class="gallery-item-overlay"><span>Equipment</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/6812568/pexels-photo-6812568.jpeg?auto=compress&w=600&q=80" alt="Happy patient" loading="lazy">
+        <div class="gallery-item-overlay"><span>Happy Patients</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking" aria-labelledby="booking-title">
+  <div class="container">
+    <div class="booking-grid">
+      <div class="booking-info">
+        <span class="section-label">Book an Appointment</span>
+        <h2 class="section-title" id="booking-title">Ready for Your Best Smile?</h2>
+        <p class="section-sub">Fill in the form and our team will confirm your appointment within a few hours. New patients always welcome.</p>
+        <div class="booking-contact" style="margin-top: 36px;">
+          <div class="booking-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.55a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><div class="ci-label">Phone</div><div class="ci-val">+256 702 857 190 &nbsp;/&nbsp; +256 776 857 190</div></div>
+          </div>
+          <div class="booking-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div><div class="ci-label">Email</div><div class="ci-val">ddrleonard@gmail.com</div></div>
+          </div>
+          <div class="booking-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><div class="ci-label">Location</div><div class="ci-val">Ntinda, Kampala, Uganda</div><div class="ci-val">Kyaliwajala, Kampala, Uganda</div></div>
+          </div>
+          <div class="booking-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div><div class="ci-label">Opening Hours</div><div class="ci-val">Mon-Fri: 8am-6pm &nbsp;|&nbsp; Sat: 9am-3pm</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-form-card">
+        <h3>Request an Appointment</h3>
+        <form action="https://formsubmit.co/katoemmanganda1@gmail.com" method="POST" id="appointment-form">
+          <input type="hidden" name="_subject" value="New Appointment Request - Dental Care Tangline">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://katoemmanuel.github.io/DENTAL-CARE-TANGLINE/#booking">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-fname">First Name</label>
+              <input type="text" id="f-fname" name="first_name" placeholder="e.g. Sarah" required>
+            </div>
+            <div class="form-group">
+              <label for="f-lname">Last Name</label>
+              <input type="text" id="f-lname" name="last_name" placeholder="e.g. Namukasa" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-email">Email Address</label>
+              <input type="email" id="f-email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="f-phone">Phone Number</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+256 7XX XXX XXX" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-service">Service Required</label>
+              <select id="f-service" name="service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option>General Check-Up &amp; Cleaning</option>
                 <option>Teeth Whitening</option>
                 <option>Dental Implants</option>
-                <option>Orthodontics</option>
-                <option>General Dentistry</option>
-                <option>Cosmetic Dentistry</option>
+                <option>Orthodontics / Braces</option>
+                <option>Cosmetic Dentistry / Veneers</option>
+                <option>Prosthetics / Dentures / Crowns</option>
+                <option>Children's Dentistry</option>
                 <option>Emergency Care</option>
-            </select>
-            <input type="date" name="date" required>
-            <textarea name="message" rows="3" placeholder="Additional Notes"></textarea>
-            <button type="submit" class="btn">Submit Booking</button>
+                <option>Root Canal Treatment</option>
+                <option>Other / Not Sure Yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-doctor">Preferred Dentist</label>
+              <select id="f-doctor" name="preferred_doctor">
+                <option value="" selected>No preference</option>
+                <option>Dr. Leonard Kato</option>
+                <option>Dr. Aisha Nakato</option>
+                <option>Dr. Moses Ssemwogerere</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-date">Preferred Date</label>
+              <input type="date" id="f-date" name="preferred_date" required>
+            </div>
+            <div class="form-group">
+              <label for="f-time">Preferred Time</label>
+              <select id="f-time" name="preferred_time">
+                <option value="">Any time</option>
+                <option>Morning (8am - 12pm)</option>
+                <option>Afternoon (12pm - 4pm)</option>
+                <option>Evening (4pm - 6pm)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-notes">Additional Notes</label>
+            <textarea id="f-notes" name="notes" rows="3" placeholder="Any symptoms, concerns, or information we should know about..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Request Appointment &rarr;</button>
         </form>
-    </section>
-
-    <section class="gallery">
-        <h2>Our Clinic Gallery</h2>
-        <div class="gallery-list">
-            <img src="images/pic1.jpg" alt="Clinic Interior">
-            <img src="images/brushs.jpg" alt="Dental Equipment">
-            <img src="https://images.pexels.com/photos/5355721/pexels-photo-5355721.jpeg?auto=compress&w=600&q=80" alt="Dentist at Work">
-            <img src="images/chess.jpg" alt="Patient Care">
-        </div>
-    </section>
-    <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31917.93723870582!2d32.575069710839855!3d0.35403070000000775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dba30d2043395%3A0x9a598f3f78ad04ec!2sLife%20Link%20Medical%20Centre%20Ntinda!5e0!3m2!1sen!2sug!4v1751437745587!5m2!1sen!2sug"
-            width="800" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
+  </div>
+</section>
 
+<!-- MAP -->
+<div class="map-section" id="contact">
+  <div class="map-wrap">
+    <iframe title="Dental Care Tangline location map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31917.93723870582!2d32.575069710839855!3d0.35403070000000775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dba30d2043395%3A0x9a598f3f78ad04ec!2sLife%20Link%20Medical%20Centre%20Ntinda!5e0!3m2!1sen!2sug!4v1751437745587!5m2!1sen!2sug"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
 
-    <footer id="contact">
-        <p>&copy; 2026 Dental Care Tangline. All rights reserved. | Contact: ddrleonard@gmail.com | Phone number +256702857190 OR +256776857190 </p>
-    </footer>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon">
+            <img src="logo.jpg.jpg">
+          </div>
+          <div class="logo-text">
+            <span class="brand">Dental Care Tangline</span>
+            <span class="tagline">Specialist Dental Clinic</span>
+          </div>
+        </div>
+        <p class="footer-about">Providing expert, compassionate dental care to families and individuals across Kampala since 2013. Your healthy smile is our greatest reward.</p>
+        <div class="footer-socials" aria-label="Social media links">
+          <a href="#" class="footer-social" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="footer-social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://wa.me/256702857190" class="footer-social" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(99, 230, 190)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <nav class="footer-links" aria-label="Services links">
+          <a href="#services">Teeth Whitening</a>
+          <a href="#services">Dental Implants</a>
+          <a href="#services">Orthodontics</a>
+          <a href="#services">General Dentistry</a>
+          <a href="#services">Cosmetic Dentistry</a>
+          <a href="#services">Emergency Care</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ntinda, Kampala, Uganda</div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.55a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+256 702 857 190 / +256 776 857 190</div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>ddrleonard@gmail.com</div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon-Fri: 8am-6pm | Sat: 9am-3pm</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Dental Care Tangline. All rights reserved.</span>
+      <span>Designed with care for healthy smiles.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('top-header');
+  window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
+
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('main-nav');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    const spans = burger.querySelectorAll('span');
+    spans[0].style.transform = open ? 'rotate(45deg) translate(5px,5px)' : '';
+    spans[1].style.opacity = open ? '0' : '1';
+    spans[2].style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : '';
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    burger.setAttribute('aria-expanded', false);
+    burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  }));
+
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  const datePicker = document.getElementById('f-date');
+  if (datePicker) datePicker.setAttribute('min', new Date().toISOString().split('T')[0]);
+
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navLinks.forEach(a => { a.classList.remove('active'); if (a.getAttribute('href') === '#' + current) a.classList.add('active'); });
+  }, { passive: true });
+</script>
 </body>
 </html>
-
